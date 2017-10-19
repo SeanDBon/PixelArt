@@ -1,0 +1,404 @@
+﻿@charset "utf-8";
+/*A PEN BY Milan Nohekl. Thanks for the animated RGB background. https://codepen.io/nohoid/pen/kIfto*/
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    background-color:  #173e43;
+}
+
+.drawarea {
+	width: 595px;
+	height: 595px;
+	position: absolute;
+	border-style: inset;
+	border-color: #000000;
+	background-color: #c9d2e0;
+	bottom: 15%;
+	right: 0;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+.toolbarColorClass {
+	display: flex;
+	flex-direction: row;
+	width: 550px; height: 60px;
+	background-color: #3fb0ac;
+	justify-content: space-around;
+	align-items: center;
+	border-style: inset;
+	border-color: #000000;
+	flex-wrap: wrap;
+
+}
+
+.toolbarToolClass {
+	display: flex;
+	flex-direction: column;
+	width: 60px; height: 375px;
+	background-color: #3fb0ac;
+	justify-content: space-around;
+	align-items: center;
+	border-style: inset;
+	border-color: #000000;
+	flex-wrap: wrap;
+
+}
+
+
+.Color1 {
+	display: flex;
+	order: 0;
+	background-color: #FFFFFF;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	margin: 5px;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	box-shadow: -2px -2px 5px #888888;
+}
+
+.Color1:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Color1:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+.Color2 {
+	order: 1;
+	background-color: #000000;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	margin: 5px;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	box-shadow: -2px -2px 5px #888888;
+}
+
+.Color2:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Color2:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+.Color3 {
+	order: 2;
+	background-color: #FF0000;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	margin: 5px;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	box-shadow: -2px -2px 5px #888888;
+}
+
+.Color3:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Color3:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+
+.Color4 {
+	order: 3;
+	background-color: #00FF00;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	margin: 5px;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	box-shadow: -2px -2px 5px #888888;
+}
+
+.Color4:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Color4:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+
+.Color5 {
+	order: 4;
+	background-color: #0000FF;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	margin: 5px;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	box-shadow: -2px -2px 5px #888888;
+}
+
+.Color5:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Color5:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+
+.ColorRGB {
+    order: 7;
+    box-shadow: -2px -2px 5px #888888;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    background-color: blue;
+    border-width: 2px;
+    margin: 5px;
+    transition: height 0.3s;
+    transition: width 0.3s;
+}
+
+.ColorRGB:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.ColorRGB:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+.Marker {
+	order: 6;
+	background-color: #173e43;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	box-shadow: -2px -2px 5px #888888;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	overflow: hidden;
+}
+
+.Marker:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Marker:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+
+
+
+.ColorPicker {
+	order: 0;
+	box-shadow: -2px -2px 5px #888888;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-width: 2px;
+    border-color: black;
+	margin: 5px;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+
+
+    -webkit-animation: rainbow 9s ease infinite;
+    -z-animation: rainbow 9s ease infinite;
+    -o-animation: rainbow 9s ease infinite;
+     animation: rainbow 9s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}*/}
+
+
+.ColorPicker:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.ColorPicker:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+
+
+.Eraser {
+	order: 3;
+	background-color: #173e43;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	box-shadow: -2px -2px 5px #888888;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	overflow: hidden;
+}
+
+.Eraser:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Eraser:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+
+.Clear {
+	order: 4;
+	background-color: #173e43;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	box-shadow: -2px -2px 5px #888888;
+}
+#RGBbgSet{
+  background-color: blue;
+  border-color: black;
+}
+.Clear:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Clear:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+.Eyedrop {
+	order: 1;
+	background-color: #173e43;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	box-shadow: -2px -2px 5px #888888;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	overflow: hidden;
+}
+
+.Eyedrop:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Eyedrop:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+.Selection {
+	order: 2;
+	background-color: #173e43;
+	width: 40px; height: 40px;
+	border-style: solid;
+	border-color: #000000;
+	border-width: 2px;
+	box-shadow: -2px -2px 5px #888888;
+	transition: height 0.3s;
+	transition: width 0.3s;
+	overflow: hidden;
+}
+
+.Selection:hover{
+	width: 50px;
+	height: 50px;
+}
+
+.Selection:hover .icon{
+	margin-left: 20%;
+	margin-top: 20%;
+
+}
+
+.icon {
+    pointer-events: none;
+    margin-left: 15%;
+    margin-top: 15%;
+}
+
+
+
+#toolbarColor{
+	position: absolute;
+	bottom: 3%;
+	right: 0;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#toolbarTool{
+	position: absolute;
+	bottom: 25%;
+	right: 0;
+	left: 20%;
+
+}

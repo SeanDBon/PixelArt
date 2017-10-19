@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src = "js/main.js" charset="utf-8"defer></script>
+<script src="js/jscolor.js"></script>
+<meta charset="utf-8">
+<title>PixelArtMaker.gov</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body onclick= colorUpdater()>
+
+
+	<div class="drawarea"></div>
+
+	<div id="toolbarTool" class="toolbarToolClass">
+
+		<div class="Eraser" onclick=eraser()>
+			<img src="icons/eraser.png" height="30px" width="30px" alt="eraser" class="icon">
+		</div>
+		<div class="Clear" onclick=newpage()>
+			<img src="icons/trashcan.png" height="30px" width="30px" alt="trashcan" class="icon" style="filter: invert(1);">
+		</div>
+		<div class="Eyedrop" onclick=getColor()>
+			<img src="icons/colordropper.png" height="30px" width="30px" alt="colordropper" class="icon" style="filter: invert(1);">
+		</div>
+		<div class="ColorPicker" onclick= rgbAutoSelect()>
+			<img src="icons/colorwheel.png" height="30px" width="30px" alt="drawtool" class="icon">	
+		</div>
+		<div class="Selection" onclick=getPos1()>
+			<img src="icons/select.png" height="30px" width="30px" alt="selector" class="icon" style="filter: invert(1);">	
+		</div>
+	</div>
+
+<!-- Toolbar at boot of page. This div handles all functions of toolbar. -->
+	<div id="toolbarColor" class="toolbarColorClass">
+		<div class="Color1" onclick=drawColorsetWhite()>
+			<img src="icons/drawtool.png" height="30px" width="30px" alt="drawtool" class="icon">
+		</div>
+		<div class="Color2" onclick=drawColorsetBlack()>
+			<img src="icons/drawtool.png" height="30px" width="30px" alt="drawtool" class="icon" style="filter: invert(1);" >
+		</div>
+		<div class="Color3" onclick=drawColorsetRed()>
+			<img src="icons/drawtool.png" height="30px" width="30px" alt="drawtool" class="icon">
+		</div>
+		<div class="Color4" onclick=drawColorsetGreen()>
+			<img src="icons/drawtool.png" height="30px" width="30px" alt="drawtool" class="icon">
+		</div>
+		<div class="Color5" onclick=drawColorsetBlue()>
+			<img src="icons/drawtool.png" height="30px" width="30px" alt="drawtool" class="icon" style="filter: invert(1);">
+		</div>
+		<div id="RGBbgSet" class="ColorRGB" onclick=rgbtool()>
+			<img src="icons/rgbtool.png" height="30px" width="30px" alt="rgbtool" class="icon">
+		</div>		
+		<div class="Marker" onclick= dropperTool()>
+			<img src="icons/marker.png" height="30px" width="30px" alt="marker" class="icon">	
+		</div>
+	</div>
+<div class="emptyHolder"></div>
+</body>
+</html>
